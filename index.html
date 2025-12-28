@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+
+<div id="background-stars"></div>
+
+<div class="app-container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1 class="logo">🌌 Weather</h1>
+
+    <button class="nav-btn active">📊 Dashboard</button>
+    <button class="nav-btn" id="home-btn">🏠 Home</button>
+    <button class="nav-btn" id="settings-btn">⚙️ Settings</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <div class="search-box">
+        <input id="city-input" placeholder="Search city..." />
+        <button id="search-btn">🔍</button>
+      </div>
+      <div class="location-info">
+        <span id="city-name">—</span>,
+        <span id="country-name">—</span>
+      </div>
+    </header>
+
+    <!-- CURRENT WEATHER -->
+    <section class="current-weather">
+        
+      <div class="temperature" id="current-temp">—</div>
+
+      <div class="condition">
+        <span id="weather-icon">⛅</span>
+        <span id="weather-description">—</span>
+      </div>
+
+      <div class="feels-like">
+        Feels like <span id="feels-like">—</span>
+      </div>
+    </section>
+
+    <!-- HOURLY -->
+    <section class="hourly-forecast">
+      <h2>🕒 Hourly Forecast</h2>
+      <div class="hourly-cards" id="hourly-container"></div>
+    </section>
+
+    <!-- TOMORROW -->
+    <section class="tomorrow-forecast">
+      <h2>📅 Tomorrow</h2>
+      <div class="tomorrow-card">
+        <div id="tomorrow-temp">—</div>
+        <div id="tomorrow-desc">—</div>
+        <div id="tomorrow-rain">—</div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights">
+      <h2>📊 Today’s Highlights</h2>
+
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <h3>🌬 Wind</h3>
+          <p><span id="wind-speed">—</span> km/h<br><span id="wind-direction">—</span></p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>🌧 Rainfall</h3>
+          <p><span id="rainfall">—</span> mm</p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>🔽 Pressure</h3>
+          <p><span id="pressure">—</span> hPa</p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>👁 Visibility</h3>
+          <p><span id="visibility">—</span> km</p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>🌫 AQI</h3>
+          <p id="aqi-value">—</p>
+          <div class="aqi-bar"><div id="aqi-fill"></div></div>
+        </div>
+
+        <div class="highlight-card">
+          <h3>🗺 Temperature Map</h3>
+          <div class="temp-map" id="temp-map">—</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+<footer>© 2025|Data provided by OpenWeatherMap<br> Developed by Samapti Sahoo</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
